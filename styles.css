@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* General */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+.text--green {
+  color: darkgreen;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  filter: brightness(85%);
+}
+
+.container {
+  padding: 56px 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+
+nav {
+  height: 80px;
+  display: flex;
+}
+
+.nav__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 160px;
+}
+
+.nav__link {
+  margin-left: 16px;
+  padding: 8px;
+}
+
+.nav__link:not(.nav__link--primary):hover {
+  text-decoration: underline;
+}
+/*My solution to preventing underline when hovering over Books (primary link). Another option: 
+
+.nav__link--primary:hover {
+  text-decoration: none !important; /*see below
+}
+
+/*'important' is for if the command comes before the first hover command, which would take less priority if 'important' is not used. It's bad practice to use unless absolutely necessary*
+*/
+
+.nav__link--primary {
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+#landing {
+  background-color: rgba(243, 250, 215, 0.496);
+}
+
+header {
+  height: calc(100vh - 80px);
+}
+
+.header__container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header__description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 56px;
+  color: darkgreen;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.header__description--button {
+  color: white;
+  background-color: darkgreen;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 20px;
+  border: none;
+  text-align: center;
+}
+
+.header__img--wrapper {
+  padding: 20px;
+  max-height: 50vh;
+  z-index: 2; /*background wave has z-index:1*/
+}
+
+/* Highlights */
+
+#highlights {
+  position: relative;
+}
+
+#highlights:before,
+#highlights:after {
+  content: "";
+  background: url("assets/wave.svg");
+  position: absolute;
+  width: 101vw;
+  height: 12vw;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#highlights:before {
+  top: 1px;
+  transform: translateY(-100%);
+}
+
+#highlights:after {
+  bottom: 1px;
+  transform: translateY(100%) rotate(180deg);
+}
+
+.highlight__wrapper {
+  display: flex;
+  width: 100%;
+  height: 180px;
+}
+
+.highlight {
+  padding: 0 24px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3);
+  text-align: center;
+  height: 100%;
+}
+
+.highlight__icon {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: darkgreen;
+  padding: 32px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-size: 32px;
+}
+
+.highlight__title {
+  font-size: 24px;
+}
+
+.highlight__para {
+  max-width: 280px;
+}
+
+#features {
+  height: 1;
+}
